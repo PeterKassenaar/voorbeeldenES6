@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Template Strings</title>
+</head>
+<body>
+<h1>Template Strings</h1>
+<h3>Car output</h3>
+<p>   Press ctrl/cmd-shift-i and view the debugging console for output.</p>
+<script src="../es6/compiled/babel/templateStrings.js"></script>
+<script>
+	//Import Car Module
+	var car = new Car('Chevy', 'Malibu', 'V6', 30000);
+	console.log('Car engine type: ' + car.engine);
+	console.log(car.start());
+	console.log(car.getTotal());
+
+
+</script>
+</body>
+</html>

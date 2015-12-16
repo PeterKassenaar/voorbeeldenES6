@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Modules and Classes - 01</title>
+</head>
+<body>
+<h1>Modules and Classes - 01</h1>
+<h3> Press ctrl/cmd-shift-i and view the debugging console for output.
+</h3>
+
+<!-- Include module loader -->
+<script src="../es6/libs/traceur.js"></script>
+<script src="../es6/libs/traceur-bootstrap.js"></script>
+<script>
+	traceur.options.experimentals = true; // niet verplicht in dit voorbeeld. Zie ook https://github.com/google/traceur-compiler/wiki/Options-for-Compiling
+</script>
+<script type="module">
+	//Import foobar-module
+	import { foo, bar } from '../es6/modules-foobar';
+	console.log(foo); // 'foo'
+	console.log(bar); // 'bar'
+	console.log('\n');
+
+	import * as foobar from '../es6/modules-foobar';
+	console.log(foobar.foo); // 'foo'
+	console.log(foobar.bar); // 'bar'
+	console.log('\n');
+
+	var person = new foobar.Person();
+	console.log('Naam van persoon', person.getName());
+
+</script>
+</body>
+</html>
