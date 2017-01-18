@@ -1,0 +1,24 @@
+{
+  "name": "browserify-demo",
+  "version": "1.0.0",
+  "description": "Test van het werken met browserify",
+  "scripts": {
+    "start": "gulp",
+    "build": "browserify js/app.js -o js/bundle.js",
+    "watch": "watchify js/app.js -o js/bundle.js"
+  },
+  "keywords": [
+    "browserify",
+    "bundle",
+    "es6"
+  ],
+  "author": "Peter Kassenaar <info@kassenaar.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "browserify": "^12.0.1",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "watchify": "^3.6.1"
+  }
+}

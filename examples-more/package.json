@@ -1,0 +1,27 @@
+{
+  "name"           : "voorbeelden-es6",
+  "version"        : "1.0.0",
+  "description"    : "Codevoorbeelden bij de cursus ES6/ECMAScript 2015",
+  "scripts"        : {
+	"start": "gulp"
+  },
+  "keywords"       : [
+	"ES6",
+	"ECMAScript",
+	"2015"
+  ],
+  "author"         : "Peter Kassenaar (Credits: @DanWahlin)",
+  "engines"        : {
+	"node": ">=0.10.28"
+  },
+  "devDependencies": {
+	"gulp"           : "^3.8.8",
+	"babel"          : "^5.8.23",
+	"gulp-babel"     : "^5.1.0",
+	"gulp-concat"    : "^2.4.1",
+	"gulp-plumber"   : "^1.0.1",
+	"gulp-typescript": "^2.0.0",
+	"gulp-uglify"    : "^1.0.1"
+  },
+  "license"        : "MIT"
+}
