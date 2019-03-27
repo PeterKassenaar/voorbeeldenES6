@@ -6,7 +6,7 @@ function Car() {
 	self.timeout = function () {
 		setTimeout(function () {
 			self.seats++;
-			console.log('ES5: Meer stoelen in het 2017 model: ', self.seats);
+			console.log('ES5: Meer stoelen in het 2019 model: ', self.seats);
 		}, 1000)
 	}
 }

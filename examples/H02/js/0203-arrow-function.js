@@ -14,5 +14,5 @@ newLogger('2. newLogger: Hallo ES6 met arrow functions!');
 let greeter = (name, age) => {
 	let msg = `Hallo ${name}, je bent ${age} jaar.`;
 	return msg;
-}
-console.log(greeter('Feline', 10));
+};
+console.log(greeter('Feline', 12));

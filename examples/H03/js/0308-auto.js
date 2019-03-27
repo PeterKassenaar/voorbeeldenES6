@@ -20,7 +20,6 @@ class Auto {
 		return this._wielen;
 	}
 
-
 	start() {
 		console.log(`${this.merk} is gestart`);
 	}

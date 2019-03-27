@@ -14,9 +14,22 @@ console.log(msg);
 // let msg = `Mijn naam is ${name} en ik ben ${age} jaar.`;
 // console.log(msg);
 
+//**************************
 // Multiline strings
+//**************************
+
+// ES5 (old skool)
+var htmlStringES5 = '<h2>Dit is een multi-line string uit ES6</h2>' +
+    '<p>lorem ipsum dolor sit...</p>' +
+    '<div>...enzovoort... </div>';
+
+// ES6
 let htmlString = `
 	<h2>Dit is een multi-line string uit ES6</h2>
-	<p>lorem ipsum dolor sit...</p> 
+	<p>lorem ipsum dolor sit...</p>
+	<div>
+	    Geen quotes- en plustekens meer nodig aan
+	    het einde van elke regel.
+	</div> 
 `;
 document.querySelector('#result').innerHTML = htmlString;

@@ -49,5 +49,6 @@ function Car(merk="onbekend", model="onbekend", ...accessoires){
 	}
 }
 
+// Kan ook (beter): werken met classes. Dit komt in de volgende module/hoofdstuk aan de orde.
 let myCar = new Car ('Mercedes', 'SL500', 'navigatie', 'stoelverwarming', 'autopilot');
 myCar.getDetails();

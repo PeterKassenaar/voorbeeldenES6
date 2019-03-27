@@ -13,12 +13,12 @@ console.log('Wat zit er in HR? : ' + map.get('HR'));
 console.log('Omvang van Map: ', map.size);
 
 if (map.has('CEO')) {
-	console.log('Gevonden! CEO: ', map.get('CEO'));
+    console.log('Gevonden! CEO: ', map.get('CEO'));
 }
 map.delete('Financien'); //Enkel item verwijderen
 // over complete map itereren:
 for (let entry of map.entries()) {
-	console.log('entry: ', entry[0], entry[1]);
+    console.log('entry: ', entry[0], entry[1]);
 }
 console.groupEnd('Map');
 
@@ -32,3 +32,13 @@ let kleurArray = ['red', 'green', 'green', 'blue', 'blue', 'blue', 'yellow', 're
 let colorSet = new Set(kleurArray);
 console.log('items in colorSet: ', colorSet);
 console.groupEnd('Set');
+
+/*****************************
+ * Workshop - remove duplicate items from array
+ ******************************/
+
+// const arrayWithDuplicates = [1, 1, 2, 3, 4, 3, 1, 8, 5, 6, 6, 7, 9, 10, 10, 9];
+// const withoutDuplicates = [...new Set(arrayWithDuplicates)];
+//
+// console.log(arrayWithDuplicates);
+// console.log(withoutDuplicates);

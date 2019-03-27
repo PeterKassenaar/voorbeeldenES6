@@ -1,7 +1,7 @@
-// 1. Maak een var
+// 1. create a var
 var age = 55;
 
-// 2. ES5: var gebruiken
+// 2. classic ES5: use a var
 for (var j = 0; j < 5; j++) {
 	age += 5;
 }
@@ -13,7 +13,7 @@ try {
 	console.log('j is out of scope');
 }
 
-// 3. ES6:  let gebruiken
+// 3. ES6:  use let
 age = 55; // reset;
 for (let i = 0; i < 5; i++) {
 	age += 5;
@@ -32,4 +32,4 @@ foo = 'bar';
 console.log('variabele is nu: ', foo); // Gaat prima: 'bar'
 
 const bar = 'baz';
-//bar = 'qux'; // TypeError: "bar is read-only" of "Assignment to constant variable"
+// bar = 'qux'; // TypeError: "bar is read-only" of "Assignment to constant variable"

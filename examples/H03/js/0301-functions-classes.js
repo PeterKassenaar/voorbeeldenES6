@@ -27,3 +27,5 @@ class PersonES6{
 
 let personES6 = new PersonES6();
 console.log(personES6.greet('Peter (class)')); // Hello Peter (class)
+
+// result - less code, better readability
