@@ -9,9 +9,9 @@ console.log(msg);
 // Toggle commentaren om verschillende uitvoer te zien.
 
 // ES6
-// let name = 'Theo';
-// let age = 22;
-// let msg = `Mijn naam is ${name} en ik ben ${age} jaar.`;
+// const name = 'Theo';
+// const age = 22;
+// const msg = `Mijn naam is ${name} en ik ben ${age} jaar.`;
 // console.log(msg);
 
 //**************************
@@ -19,12 +19,12 @@ console.log(msg);
 //**************************
 
 // ES5 (old skool)
-var htmlStringES5 = '<h2>Dit is een multi-line string uit ES6</h2>' +
+var htmlStringES5 = '<h2>Dit is een multi-line string uit ES5</h2>' +
     '<p>lorem ipsum dolor sit...</p>' +
     '<div>...enzovoort... </div>';
 
 // ES6
-let htmlString = `
+const htmlString = `
 	<h2>Dit is een multi-line string uit ES6</h2>
 	<p>lorem ipsum dolor sit...</p>
 	<div>
