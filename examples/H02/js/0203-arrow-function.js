@@ -7,11 +7,11 @@ var oldLogger = function (msg) {
 oldLogger('1. oldLogger:  Hallo ouderwets ES5!');
 
 // 2. ES6, met arrow function
-let newLogger = (msg) => console.log(msg);
+const newLogger = (msg) => console.log(msg);
 newLogger('2. newLogger: Hallo ES6 met arrow functions!');
 
 // 3. Arrow function met meerdere regels
-let greeter = (name, age) => {
+const greeter = (name, age) => {
 	let msg = `Hallo ${name}, je bent ${age} jaar.`;
 	return msg;
 };
