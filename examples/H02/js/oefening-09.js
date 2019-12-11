@@ -5,7 +5,7 @@ const urlNameCountries = 'https://restcountries.eu/rest/v2/name/'; // + {name}
 
 // 5a. caching van UI-elementen
 const btnGet = document.querySelector('#btnGet');
-const partialCountries = document.querySelector('#partialCountries')
+const partialCountries = document.querySelector('#partialCountries');
 
 // 5b. Event handler
 btnGet.addEventListener('click', () => {

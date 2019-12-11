@@ -1,3 +1,7 @@
+// Old-school - if you still want/have to work with Gulp.
+// Gulp is now mainly replaced by scripts in package.json.
+
+//
 // gulpfile.js
 var gulp = require('gulp'),
 	babel = require('gulp-babel'),
