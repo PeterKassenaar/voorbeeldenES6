@@ -19,6 +19,7 @@ const apiCall = async () => {
 };
 
 // 3. the 'view' of the application, calls the controller.
+// It has ALSO be marked as async, b/c the API returns a Promise(!).
 const getMovies = async () => {
 	// 3a. The result of the API-call is 'destructured' into three
 	// different variables, namely Search, totalResults and Response.
