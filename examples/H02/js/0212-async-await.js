@@ -12,7 +12,10 @@ const scaryClown = () => {
 
 // 2. Here's async/await. We declare the msg function, which is async.
 // It awaits the resolving of scaryClown(), before continuing.
-// after that a message is printed in the console. This LOOKS like synchronous code.
+// after that a message is printed in the console.
+// This LOOKS like synchronous code.
+// So Async/Await is just async code, written down as sync code, so
+// it is easier for the eyes and (hopefully!) easier to grasp.
 const msg = async () => {
 	const msg = await scaryClown();
 	console.log('Message:', msg);
@@ -25,11 +28,11 @@ msg(); // Message: 🤡 <-- after 2 seconds
 // 3. With a Fetch-example, from previous exercise
 // some constants
 const url = 'https://restcountries.eu/rest/v2/all';
-const myCountries = fetch(url);
-const listCountries = document.querySelector('#listCountries');
+const myCountries = fetch(url); // using native browser .fetch()
+const listCountries = document.querySelector('#listCountries'); // DOM caching
 
 //**********************
-// Promise-code, with fetch
+// 4. Promise-code, with fetch, using .then() chaining
 //**********************
 const onFetch = () => {
 	setTimeout(() => {
@@ -55,14 +58,31 @@ const onFetch = () => {
 	}, 1500)
 };
 //**********************
-// Async/await-code, with fetch
+// 5. Async/await-code, with fetch
 //**********************
-const onAsync = async () => {
+
+// 5a. Direct code, using the 'old-skool' function() notation.
+// It is the same as const onAsyncDirect = async () => {....}
+async function onAsyncDirect(){
+	const response = await fetch(url);
+	const countryList = await response.json(); // also await the second async handler!
+	countryList.forEach(country => {
+		// Add the country name to the list in the UI
+		listCountries.innerHTML += `<li>${country.name}</li>`;
+	});
+}
+
+
+// 5b. Via the previously declared function(s). Result is
+// the same, but it is more DRY and possibly simpler to read.
+// Pick what's yours.
+const onAsyncViaHelper = async () => {
 	await onFetch();
 };
 
+
 //**********************
-// Helper code, some buttons
+// 6. Helper code, some buttons
 //**********************
 document.querySelector('#btnClear').addEventListener('click', () => {
 	listCountries.innerHTML = '';
@@ -71,7 +91,8 @@ document.querySelector('#btnFetch').addEventListener('click', () => {
 	onFetch();
 });
 document.querySelector('#btnAsync').addEventListener('click', () => {
-	onAsync();
+	onAsyncDirect();
+	// onAsyncViaHelper();
 });
 
 
